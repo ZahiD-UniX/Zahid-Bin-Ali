@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zahid Bin Ali — HR & Admin Professional | Technical Recruiter | HR Operations</title>
+  <meta name="description" content="Portfolio of Zahid Bin Ali — HR & Admin Professional, Technical Recruiter, and HR Operations Specialist with 3+ years experience in US & BD tech hiring, visa management (H1B/EB2/EB3), and labour compliance.">
+  <meta name="keywords" content="Zahid Bin Ali, Technical Recruiter, HR Operations, Talent Acquisition, IT Hiring, Bangladesh Labour Act, HRBP, UpSkill Bangladesh, Gorillamove">
+  <meta name="author" content="Zahid Bin Ali">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Zahid Bin Ali — Technical Recruiter & HR Operations Specialist">
+  <meta property="og:description" content="Specialized in IT hiring (AI/ML, DevOps, Full-Stack), high-volume talent scaling, and end-to-end HR operations.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/profile.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Custom Mouse Follower Cursor -->
+  <div class="custom-cursor" id="custom-cursor"></div>
+  <div class="custom-cursor-follower" id="custom-cursor-follower"></div>
+
+  <!-- Interactive Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Ambient Glowing Blobs -->
+  <div class="glow-blob glow-blob-1"></div>
+  <div class="glow-blob glow-blob-2"></div>
+  <div class="glow-blob glow-blob-3"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Zahid Bin Ali Homepage">
+        <span class="logo-badge">Z</span>
+        <div class="logo-text">
+          <span class="logo-name">Zahid Bin Ali</span>
+          <span class="logo-sub">HR & Tech Recruiter</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link"><i class="fa-regular fa-user"></i> About</a>
+        <a href="#experience" class="nav-link"><i class="fa-solid fa-briefcase"></i> Experience</a>
+        <a href="#sourcing" class="nav-link"><i class="fa-solid fa-code"></i> Tech Sourcing</a>
+        <a href="#skills" class="nav-link"><i class="fa-solid fa-cubes"></i> Skills</a>
+        <a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+        <a href="#calculator" class="nav-link"><i class="fa-solid fa-calculator"></i> Hiring ROI</a>
+        <a href="#contact" class="nav-link"><i class="fa-regular fa-envelope"></i> Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Sound FX Toggle -->
+        <button class="nav-btn icon-btn" id="sound-toggle" title="Toggle audio feedback" aria-label="Toggle Sound Effects">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+
+        <!-- Command Palette Trigger -->
+        <button class="nav-btn cmd-palette-trigger" id="cmd-trigger" title="Search / Quick Jump (Ctrl+K)">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span class="cmd-key">⌘K</span>
+        </button>
+
+        <!-- Theme Toggle -->
+        <button class="nav-btn icon-btn" id="theme-toggle" title="Switch Theme" aria-label="Toggle Dark/Light Mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- Quick Resume Download Button -->
+        <a href="assets/Zahid_Bin_Ali_Resume.pdf" download="Zahid_Bin_Ali_Resume.pdf" class="btn btn-primary btn-sm resume-btn">
+          <i class="fa-solid fa-arrow-down-to-line"></i>
+          <span>Resume</span>
+        </a>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <span class="drawer-title">Navigation</span>
+      <button class="drawer-close" id="drawer-close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="drawer-links">
+      <a href="#hero" class="drawer-link"><i class="fa-solid fa-house"></i> Home</a>
+      <a href="#about" class="drawer-link"><i class="fa-regular fa-user"></i> About Zahid</a>
+      <a href="#experience" class="drawer-link"><i class="fa-solid fa-briefcase"></i> Experience</a>
+      <a href="#sourcing" class="drawer-link"><i class="fa-solid fa-code"></i> Technical Sourcing</a>
+      <a href="#skills" class="drawer-link"><i class="fa-solid fa-cubes"></i> Core Competencies</a>
+      <a href="#education" class="drawer-link"><i class="fa-solid fa-graduation-cap"></i> Education & Certs</a>
+      <a href="#calculator" class="drawer-link"><i class="fa-solid fa-calculator"></i> Hiring ROI Calculator</a>
+      <a href="#contact" class="drawer-link"><i class="fa-regular fa-envelope"></i> Contact</a>
+      <a href="assets/Zahid_Bin_Ali_Resume.pdf" download class="drawer-link resume-highlight"><i class="fa-solid fa-download"></i> Download Full Resume</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="status-pill animate-fade-in">
+            <span class="pulsing-dot"></span>
+            <span class="status-text">Available for Strategic HR & Technical Recruiting Roles</span>
+          </div>
+
+          <h1 class="hero-title animate-fade-up">
+            Hi, I'm <span class="gradient-text">Zahid Bin Ali</span>
+          </h1>
+
+          <div class="hero-subtitle-wrapper animate-fade-up delay-1">
+            <span class="subtitle-prefix">Expert in</span>
+            <span class="typing-text" id="typing-text"></span>
+            <span class="typing-cursor">|</span>
+          </div>
+
+          <p class="hero-bio animate-fade-up delay-2">
+            Dynamic HR & People Operations Professional with <strong>3+ years</strong> of proven excellence driving end-to-end talent acquisition for cutting-edge <strong>U.S. & Bangladesh tech teams</strong> (AI/ML, DevOps, Full-Stack), high-volume operational scaling, international visa facilitation (H1B, EB2, EB3), and flawless labour law compliance.
+          </p>
+
+          <!-- Quick Contact Chips -->
+          <div class="contact-chips animate-fade-up delay-3">
+            <a href="mailto:zahidbinali087@gmail.com" class="chip">
+              <i class="fa-solid fa-envelope"></i> zahidbinali087@gmail.com
+            </a>
+            <a href="https://wa.me/8801712245856" target="_blank" rel="noopener" class="chip chip-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> +880 1712-245856
+            </a>
+            <span class="chip">
+              <i class="fa-solid fa-location-dot"></i> Dhaka Cantonment, 1206
+            </span>
+            <a href="https://linkedin.com/in/zahid-bin-ali-zu" target="_blank" rel="noopener" class="chip chip-linkedin">
+              <i class="fa-brands fa-linkedin"></i> linkedin.com/in/zahid-bin-ali-zu
+            </a>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-cta-group animate-fade-up delay-4">
+            <a href="#contact" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Get in Touch</span>
+            </a>
+            <button class="btn btn-secondary btn-lg" id="preview-resume-btn">
+              <i class="fa-solid fa-eye"></i>
+              <span>Preview Resume</span>
+            </button>
+            <a href="assets/Zahid_Bin_Ali_Resume.pdf" download="Zahid_Bin_Ali_Resume.pdf" class="btn btn-outline btn-lg">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Download PDF</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual Profile Card -->
+        <div class="hero-visual animate-scale-in">
+          <div class="profile-card-3d" id="profile-3d-card">
+            <div class="avatar-ring">
+              <div class="avatar-container">
+                <img src="assets/profile.png" alt="Zahid Bin Ali - HR & Technical Recruiter" class="avatar-img" id="hero-avatar">
+              </div>
+              <div class="orbit-badge orbit-1" title="Technical Recruiter">
+                <i class="fa-solid fa-code"></i>
+                <span>Tech Hiring</span>
+              </div>
+              <div class="orbit-badge orbit-2" title="International Visas">
+                <i class="fa-solid fa-passport"></i>
+                <span>H1B / EB2 / EB3</span>
+              </div>
+              <div class="orbit-badge orbit-3" title="Labour Law Compliance">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <span>Compliance</span>
+              </div>
+            </div>
+
+            <!-- Profile Floating Summary Box -->
+            <div class="floating-meta-card">
+              <div class="meta-row">
+                <div class="meta-icon"><i class="fa-solid fa-circle-check"></i></div>
+                <div class="meta-info">
+                  <span class="meta-label">Current Role</span>
+                  <strong class="meta-val">Sr. Executive HR & Tech Recruiter</strong>
+                </div>
+              </div>
+              <div class="meta-divider"></div>
+              <div class="meta-row">
+                <div class="meta-icon company-icon"><i class="fa-solid fa-building"></i></div>
+                <div class="meta-info">
+                  <span class="meta-label">Organization</span>
+                  <strong class="meta-val">UpSkill Bangladesh</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS & KEY HIGHLIGHTS COUNTER STRIP -->
+    <section class="metrics-section">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-card" data-tilt>
+            <div class="metric-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+            <div class="metric-number-wrapper">
+              <span class="metric-number counter" data-target="650">0</span><span class="metric-plus">+</span>
+            </div>
+            <span class="metric-label">Interviews Conducted</span>
+            <p class="metric-sub">Rigorous technical screening & rapid talent pipeline execution</p>
+          </div>
+
+          <div class="metric-card" data-tilt>
+            <div class="metric-icon"><i class="fa-solid fa-user-check"></i></div>
+            <div class="metric-number-wrapper">
+              <span class="metric-number counter" data-target="320">0</span><span class="metric-plus">+</span>
+            </div>
+            <span class="metric-label">Professionals Onboarded</span>
+            <p class="metric-sub">300+ frontline delivery riders & 20+ senior tech/executive hires</p>
+          </div>
+
+          <div class="metric-card" data-tilt>
+            <div class="metric-icon"><i class="fa-solid fa-stopwatch-20"></i></div>
+            <div class="metric-number-wrapper">
+              <span class="metric-number counter" data-target="3">0</span><span class="metric-plus">+</span>
+            </div>
+            <span class="metric-label">Years of HR Excellence</span>
+            <p class="metric-sub">Full spectrum HRBP, HRIS, operations, & talent management</p>
+          </div>
+
+          <div class="metric-card" data-tilt>
+            <div class="metric-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="metric-number-wrapper">
+              <span class="metric-number counter" data-target="100">0</span><span class="metric-plus">%</span>
+            </div>
+            <span class="metric-label">Statutory Compliance</span>
+            <p class="metric-sub">Bangladesh Labour Act 2006, Labour Rules 2015 & ISO 9001</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & STRATEGIC PILLARS -->
+    <section class="about-section section-padding" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Executive Summary</span>
+          <h2 class="section-title">Bridging Human Capital & Business Growth</h2>
+          <p class="section-desc">
+            A strategic HR specialist who speaks the language of software engineering, understands international mobility, and implements resilient administrative and compliance structures.
+          </p>
+        </div>
+
+        <div class="about-tabs-container">
+          <div class="about-tabs-nav">
+            <button class="about-tab-btn active" data-tab="tab-philosophy">
+              <i class="fa-solid fa-brain"></i> HR Philosophy
+            </button>
+            <button class="about-tab-btn" data-tab="tab-sourcing">
+              <i class="fa-solid fa-microchip"></i> Tech Sourcing Edge
+            </button>
+            <button class="about-tab-btn" data-tab="tab-mobility">
+              <i class="fa-solid fa-passport"></i> Global Mobility (H1B/EB)
+            </button>
+            <button class="about-tab-btn" data-tab="tab-ops">
+              <i class="fa-solid fa-sliders"></i> Operations & Compliance
+            </button>
+          </div>
+
+          <div class="about-tabs-content">
+            <!-- TAB 1: Philosophy -->
+            <div class="tab-pane active" id="tab-philosophy">
+              <div class="tab-pane-grid">
+                <div class="tab-text">
+                  <h3>Strategic People Partnering</h3>
+                  <p>
+                    I view Human Resources not as a transactional department, but as a core growth engine. With over 3 years managing end-to-end HR in both fast-scaling logistics and high-velocity technology startups, I align talent acquisition directly with client deliverables and corporate OKRs.
+                  </p>
+                  <p>
+                    Whether spearheading solo HR operations for Bangladesh branches or interfacing with U.S.-based hiring managers, I ensure employee retention, culture building, and transparent performance management.
+                  </p>
+                  <ul class="highlight-checklist">
+                    <li><i class="fa-solid fa-check"></i> Sole HR representative managing attendance, leave, records, and policies independently.</li>
+                    <li><i class="fa-solid fa-check"></i> Hands-on experience with HRIS, EDMS, ERP, and SPSS analytics for data-informed HR decisions.</li>
+                    <li><i class="fa-solid fa-check"></i> Deep cultural empathy combined with disciplined administrative governance.</li>
+                  </ul>
+                </div>
+                <div class="tab-feature-cards">
+                  <div class="glass-feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-people-arrows"></i></div>
+                    <h4>Talent Magnet</h4>
+                    <p>Sourcing across LinkedIn Recruiter, Bdjobs, Shomvob, Nextjob, Monster, Dice, and tech communities.</p>
+                  </div>
+                  <div class="glass-feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h4>Metric Driven</h4>
+                    <p>Optimizing time-to-hire, offer acceptance ratios, and first-year retention metrics.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 2: Tech Sourcing Edge -->
+            <div class="tab-pane" id="tab-sourcing">
+              <div class="tab-pane-grid">
+                <div class="tab-text">
+                  <h3>Technical Recruiting with Developer Literacy</h3>
+                  <p>
+                    Most technical recruiters evaluate candidates by matching buzzwords. Having completed specialized certifications in <strong>IT Recruitment</strong>, <strong>Networking & Cyber Security</strong>, and <strong>AI Prompt Engineering</strong>, I conduct preliminary technical screenings myself.
+                  </p>
+                  <p>
+                    I inspect candidate GitHub repositories, review system architecture portfolios, analyze code readability, and evaluate problem-solving aptitude before presenting shortlists to engineering leads.
+                  </p>
+                  <ul class="highlight-checklist">
+                    <li><i class="fa-solid fa-check"></i> Certified in IT Recruitment by UpSkill Academia (GitHub audits & code evaluation).</li>
+                    <li><i class="fa-solid fa-check"></i> Deep understanding of modern stacks: AI/ML (PyTorch, TensorFlow, LLMs), Full-Stack, and DevOps.</li>
+                    <li><i class="fa-solid fa-check"></i> High shortlist-to-hire conversion rates for demanding U.S. and overseas clients.</li>
+                  </ul>
+                </div>
+                <div class="tab-feature-cards">
+                  <div class="glass-feature-card">
+                    <div class="feature-icon"><i class="fa-brands fa-github"></i></div>
+                    <h4>GitHub & Code Audits</h4>
+                    <p>Verifying commit frequency, repo authenticity, pull request etiquette, and architecture patterns.</p>
+                  </div>
+                  <div class="glass-feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h4>AI-Powered Sourcing</h4>
+                    <p>Leveraging advanced prompt engineering and boolean search syntaxes to uncover passive top-tier candidates.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 3: Global Mobility & Visas -->
+            <div class="tab-pane" id="tab-mobility">
+              <div class="tab-pane-grid">
+                <div class="tab-text">
+                  <h3>Cross-Border Mobility & Visa Management</h3>
+                  <p>
+                    Navigating international employment requires precision, meticulous documentation, and strict adherence to immigration frameworks. At UpSkill Bangladesh, I coordinate cross-border relocation, student/trainer logistics, and U.S. work visa tracks.
+                  </p>
+                  <p>
+                    From preparing petition documentation for H1B, EB2, and EB3 visa categories to coordinating international interview pipelines and relocation timelines, I bridge global hiring barriers.
+                  </p>
+                  <ul class="highlight-checklist">
+                    <li><i class="fa-solid fa-check"></i> Direct coordination on H1B, EB2, and EB3 visa documentation management.</li>
+                    <li><i class="fa-solid fa-check"></i> Role as Student Coordinator, Trainer Coordinator, and Visa Coordinator for UpSkill Academia.</li>
+                    <li><i class="fa-solid fa-check"></i> Implementation of ISO 9001 quality management standards across onboarding processes.</li>
+                  </ul>
+                </div>
+                <div class="tab-feature-cards">
+                  <div class="glass-feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-passport"></i></div>
+                    <h4>Visa Lifecycle</h4>
+                    <p>Facilitating petition readiness, qualification credential evaluation, and consulate coordination.</p>
+                  </div>
+                  <div class="glass-feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+                    <h4>ISO 9001 Compliance</h4>
+                    <p>Standardized documentation protocols ensuring international quality certification readiness.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- TAB 4: Operations & Compliance -->
+            <div class="tab-pane" id="tab-ops">
+              <div class="tab-pane-grid">
+                <div class="tab-text">
+                  <h3>Operational Rigor & Labour Law Governance</h3>
+                  <p>
+                    Flawless HR operations demand deep familiarity with local labor jurisprudence, vendor ecosystems, and administrative accountability. I hold comprehensive knowledge of the <strong>Bangladesh Labour Act 2006</strong> and <strong>Bangladesh Labour Rules 2015</strong>.
+                  </p>
+                  <p>
+                    During hypergrowth at Gorillamove, I structured multi-tier payroll calculations for over 300 delivery riders, instituted warehouse quality control (QC) checks, audited dispatch bottlenecks, and managed admin procurement end-to-end.
+                  </p>
+                  <ul class="highlight-checklist">
+                    <li><i class="fa-solid fa-check"></i> Expertise in BLA 2006 & BLR 2015 statutory compliance, dispute mediation, and leaves.</li>
+                    <li><i class="fa-solid fa-check"></i> End-to-end procurement, office administration, facility security, and petty cash oversight.</li>
+                    <li><i class="fa-solid fa-check"></i> Supply chain, warehouse audits, FMCG goods pricing, and fleet payroll accuracy.</li>
+                  </ul>
+                </div>
+                <div class="tab-feature-cards">
+                  <div class="glass-feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-money-check-dollar"></i></div>
+                    <h4>Fleet & Staff Payroll</h4>
+                    <p>Zero-defect salary disbursement, bonus calculations, incentives, and attendance reconciliations.</p>
+                  </div>
+                  <div class="glass-feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-boxes-packing"></i></div>
+                    <h4>Supply Chain & Audits</h4>
+                    <p>Warehouse efficiency audits, dispatch monitoring, and commercial operational control.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE TIMELINE -->
+    <section class="experience-section section-padding" id="experience">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Career Milestones</span>
+          <h2 class="section-title">Professional Experience</h2>
+          <p class="section-desc">
+            A chronological timeline of impactful contributions across tech talent acquisition, hyper-growth workforce scaling, and strategic HR operations.
+          </p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- TIMELINE ITEM 1 -->
+          <div class="timeline-item" data-tilt>
+            <div class="timeline-marker">
+              <i class="fa-solid fa-building-user"></i>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-top">
+                <div class="timeline-role-info">
+                  <span class="role-badge active-badge">Current Role</span>
+                  <h3 class="role-title">Senior Executive, HR & Administration / Technical Recruiter</h3>
+                  <h4 class="company-name">UpSkill Bangladesh <span class="location">· Shahjadpur, Dhaka</span></h4>
+                </div>
+                <div class="timeline-date">
+                  <i class="fa-regular fa-calendar-days"></i> Nov 2025 – Present
+                </div>
+              </div>
+
+              <p class="timeline-overview">
+                Serving as the sole Human Resources representative running complete HR functions, administrative affairs, and strategic tech talent acquisition for local and high-profile U.S. client mandates.
+              </p>
+
+              <div class="timeline-bullets-wrapper">
+                <ul class="timeline-bullets">
+                  <li><strong>Sole HR Representation:</strong> Direct ownership of attendance, leave management, employee records, compensation reviews, and internal HR policy implementation.</li>
+                  <li><strong>U.S. & Local Technical Recruitment:</strong> Managing full recruitment lifecycles for complex roles: <em>AI/ML Engineers, AI Software Developers, Full Stack Developers, Webflow Developers, SEO Executives, Video Editors, and AI Visual Specialists</em>.</li>
+                  <li><strong>Multi-Channel Talent Sourcing:</strong> Sourcing, screening, and shortlisting talent through LinkedIn Recruiter, Bdjobs, Shomvob, Nextjob, Monster, Dice, and Facebook.</li>
+                  <li><strong>Client & Stakeholder Management:</strong> Partnering directly with U.S. hiring managers to define job architectures, compensation bands, and sprint hiring timelines.</li>
+                  <li><strong>Global Mobility & Visas:</strong> Managing H1B, EB2, and EB3 visa documentation processes and international onboarding workflows.</li>
+                  <li><strong>ISO 9001 Quality Certification:</strong> Key contributor driving ISO 9001 process documentation and standard operating procedures for UpSkill.</li>
+                  <li><strong>Academic & Executive Coordination:</strong> Functioning as Student Coordinator, Trainer Coordinator, and Visa Coordinator for UpSkill Academia.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-tags">
+                <span class="tag">Technical Recruitment</span>
+                <span class="tag">AI/ML Hiring</span>
+                <span class="tag">H1B / EB2 / EB3</span>
+                <span class="tag">U.S. Client Coordination</span>
+                <span class="tag">ISO 9001</span>
+                <span class="tag">Sole HR Lead</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TIMELINE ITEM 2 -->
+          <div class="timeline-item" data-tilt>
+            <div class="timeline-marker">
+              <i class="fa-solid fa-user-gear"></i>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-top">
+                <div class="timeline-role-info">
+                  <span class="role-badge">Promotion Track</span>
+                  <h3 class="role-title">Executive, Human Resources</h3>
+                  <h4 class="company-name">UpSkill Bangladesh <span class="location">· Dhaka, Bangladesh</span></h4>
+                </div>
+                <div class="timeline-date">
+                  <i class="fa-regular fa-calendar-days"></i> Nov 2024 – Nov 2025
+                </div>
+              </div>
+
+              <p class="timeline-overview">
+                Supported end-to-end recruitment pipelines, regulatory labor compliance, vendor contracts, and daily office administrative infrastructure.
+              </p>
+
+              <div class="timeline-bullets-wrapper">
+                <ul class="timeline-bullets">
+                  <li>Supported full-cycle recruitment and employee lifecycle operations for Bangladesh office.</li>
+                  <li>Maintained meticulous employee personnel records and statutory documentation in full alignment with Bangladesh labour regulations.</li>
+                  <li>Handled total office administration, including lease agreements, utility allocations, and facility operations.</li>
+                  <li>Oversaw facility security checks, office infrastructure maintenance, and vendor negotiations.</li>
+                  <li>Managed administrative petty cash disbursements, reconciliation, and purchase requisitions.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-tags">
+                <span class="tag">Labour Regulations</span>
+                <span class="tag">Vendor Management</span>
+                <span class="tag">Office Administration</span>
+                <span class="tag">Petty Cash & Requisitions</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TIMELINE ITEM 3 -->
+          <div class="timeline-item" data-tilt>
+            <div class="timeline-marker">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-top">
+                <div class="timeline-role-info">
+                  <span class="role-badge highlight-badge">High Volume Scaling</span>
+                  <h3 class="role-title">Executive, HR Operations</h3>
+                  <h4 class="company-name">Gorillamove Limited <span class="location">· Dhaka, Bangladesh</span></h4>
+                </div>
+                <div class="timeline-date">
+                  <i class="fa-regular fa-calendar-days"></i> May 2023 – Oct 2024
+                </div>
+              </div>
+
+              <p class="timeline-overview">
+                Key driver of rapid workforce expansion during blitzscale phase: conducted 650+ interviews, hired 320+ individuals, and managed logistics fleet operations.
+              </p>
+
+              <div class="timeline-bullets-wrapper">
+                <ul class="timeline-bullets">
+                  <li><strong>High-Volume Recruiting:</strong> Conducted <strong>650+ structured interviews</strong> and onboarded <strong>300+ delivery riders</strong> and <strong>20+ executive/senior executive</strong> personnel across engineering, operations, and marketing.</li>
+                  <li><strong>Fleet Payroll Management:</strong> Structured and calculated monthly payroll and mileage incentives for 300+ riders with zero error rate.</li>
+                  <li><strong>Commercial Operations & FMCG:</strong> Participated in pricing models, FMCG inventory tracking, and vendor procurement.</li>
+                  <li><strong>Warehouse Operational Audits:</strong> Conducted on-site warehouse audits to identify process bottlenecks and optimize fulfillment speed.</li>
+                  <li><strong>Quality Control (QC):</strong> Monitored order dispatch, packing accuracy, picking operations, and return reconciliations.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-tags">
+                <span class="tag">650+ Interviews</span>
+                <span class="tag">300+ Onboarded</span>
+                <span class="tag">Fleet Payroll</span>
+                <span class="tag">Warehouse Audits</span>
+                <span class="tag">FMCG & Commercial Ops</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- TIMELINE ITEM 4 -->
+          <div class="timeline-item" data-tilt>
+            <div class="timeline-marker">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-top">
+                <div class="timeline-role-info">
+                  <span class="role-badge">Foundation</span>
+                  <h3 class="role-title">Intern, Human Resources</h3>
+                  <h4 class="company-name">Business Automation Ltd <span class="location">· Kawran Bazar, Dhaka</span></h4>
+                </div>
+                <div class="timeline-date">
+                  <i class="fa-regular fa-calendar-days"></i> Jan 2023 – Apr 2023
+                </div>
+              </div>
+
+              <p class="timeline-overview">
+                Hands-on HR internship in an established enterprise IT environment tackling post-pandemic attrition challenges and remote work policy formulation.
+              </p>
+
+              <div class="timeline-bullets-wrapper">
+                <ul class="timeline-bullets">
+                  <li>Supported corporate HR initiatives in an IT company navigating high engineer turnover and remote/hybrid work policies.</li>
+                  <li>Assisted in technical candidate sourcing, scheduling interview panels, and preparing onboarding packages.</li>
+                  <li>Streamlined employee documentation and facilitated cultural integration for new software engineers.</li>
+                </ul>
+              </div>
+
+              <div class="timeline-tags">
+                <span class="tag">IT Staffing</span>
+                <span class="tag">Remote Work Policies</span>
+                <span class="tag">Attrition Analysis</span>
+                <span class="tag">Interview Coordination</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL RECRUITING & SOURCING MATRIX -->
+    <section class="sourcing-section section-padding" id="sourcing">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Specialized Expertise</span>
+          <h2 class="section-title">Technical Sourcing & Evaluation Matrix</h2>
+          <p class="section-desc">
+            How Zahid screens, evaluates, and shortlists top 1% technology candidates for international and local engineering teams.
+          </p>
+        </div>
+
+        <div class="tech-matrix-grid">
+          <!-- CARD 1: AI / ML -->
+          <div class="tech-card" data-tilt>
+            <div class="tech-header">
+              <div class="tech-icon ai-icon"><i class="fa-solid fa-robot"></i></div>
+              <div class="tech-titles">
+                <h3>AI & Machine Learning</h3>
+                <span class="tech-sub">AI Engineers, ML Researchers, AI Visuals</span>
+              </div>
+            </div>
+            <p class="tech-desc">
+              Screening candidates on foundational algorithms, neural network frameworks, LLM integrations, fine-tuning, and RAG pipelines.
+            </p>
+            <div class="skill-stack-pills">
+              <span>Python</span>
+              <span>PyTorch</span>
+              <span>TensorFlow</span>
+              <span>LangChain</span>
+              <span>HuggingFace</span>
+              <span>Vector DBs</span>
+            </div>
+            <div class="screening-method">
+              <strong>Screening Method:</strong> Math/stats intuition, HuggingFace model contributions, GitHub architecture review.
+            </div>
+          </div>
+
+          <!-- CARD 2: Full-Stack & Web -->
+          <div class="tech-card" data-tilt>
+            <div class="tech-header">
+              <div class="tech-icon web-icon"><i class="fa-solid fa-layer-group"></i></div>
+              <div class="tech-titles">
+                <h3>Full Stack & Frontend</h3>
+                <span class="tech-sub">Full Stack, React/Next.js, Webflow Devs</span>
+              </div>
+            </div>
+            <p class="tech-desc">
+              Vetting engineers for modern reactive frontends, state management, API design, server-side rendering, and responsive UX.
+            </p>
+            <div class="skill-stack-pills">
+              <span>React</span>
+              <span>Next.js</span>
+              <span>Node.js</span>
+              <span>TypeScript</span>
+              <span>Webflow</span>
+              <span>PostgreSQL</span>
+            </div>
+            <div class="screening-method">
+              <strong>Screening Method:</strong> Live portfolio walkthrough, lighthouse performance checks, responsive CSS audit.
+            </div>
+          </div>
+
+          <!-- CARD 3: DevOps & Systems -->
+          <div class="tech-card" data-tilt>
+            <div class="tech-header">
+              <div class="tech-icon devops-icon"><i class="fa-solid fa-network-wired"></i></div>
+              <div class="tech-titles">
+                <h3>DevOps, Cloud & QA</h3>
+                <span class="tech-sub">DevOps Engineers, SRE, QA Automation</span>
+              </div>
+            </div>
+            <p class="tech-desc">
+              Assessing infrastructure as code, CI/CD pipelines, container orchestration, microservices monitoring, and automated test coverage.
+            </p>
+            <div class="skill-stack-pills">
+              <span>Docker</span>
+              <span>Kubernetes</span>
+              <span>AWS</span>
+              <span>CI/CD</span>
+              <span>Selenium / Cypress</span>
+              <span>Linux</span>
+            </div>
+            <div class="screening-method">
+              <strong>Screening Method:</strong> Dockerfile optimization review, incident management triage, automated QA test suite logic.
+            </div>
+          </div>
+
+          <!-- CARD 4: Growth, SEO & Media -->
+          <div class="tech-card" data-tilt>
+            <div class="tech-header">
+              <div class="tech-icon growth-icon"><i class="fa-solid fa-bullhorn"></i></div>
+              <div class="tech-titles">
+                <h3>Growth, SEO & Creative</h3>
+                <span class="tech-sub">SEO Executives, Video Editors, Content</span>
+              </div>
+            </div>
+            <p class="tech-desc">
+              Evaluating technical SEO audits, core web vitals, editorial motion design reels, and digital brand storytelling ability.
+            </p>
+            <div class="skill-stack-pills">
+              <span>Technical SEO</span>
+              <span>Premiere Pro</span>
+              <span>After Effects</span>
+              <span>Ahrefs / SEMrush</span>
+              <span>GA4</span>
+            </div>
+            <div class="screening-method">
+              <strong>Screening Method:</strong> Showreel pacing review, organic ranking case studies, keyword clustering logic.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CORE SKILLS & COMPETENCIES -->
+    <section class="skills-section section-padding" id="skills">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Competencies</span>
+          <h2 class="section-title">Core Skills & Proficiency</h2>
+          <p class="section-desc">
+            A balanced synthesis of strategic people operations, technical recruitment acumen, regulatory compliance, and technology platforms.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="skills-filter-nav">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="recruitment">Talent Acquisition</button>
+          <button class="filter-btn" data-filter="operations">HR Operations & HRBP</button>
+          <button class="filter-btn" data-filter="compliance">Compliance & Visas</button>
+          <button class="filter-btn" data-filter="tech">Systems & Tools</button>
+        </div>
+
+        <div class="skills-grid" id="skills-grid">
+          <!-- SKILL 1 -->
+          <div class="skill-card" data-category="recruitment" data-tilt>
+            <div class="skill-top">
+              <div class="skill-badge-icon"><i class="fa-solid fa-bullseye"></i></div>
+              <div class="skill-meta">
+                <h4>Technical & Non-Technical Recruitment</h4>
+                <span class="skill-level">Mastery · 95%</span>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" data-progress="95%"></div>
+            </div>
+            <p class="skill-info">End-to-end recruitment lifecycle, sourcing passive talent, candidate screening, compensation negotiation, and structured onboarding.</p>
+            <div class="skill-subtags">
+              <span>LinkedIn Recruiter</span>
+              <span>Bdjobs</span>
+              <span>Dice</span>
+              <span>Monster</span>
+              <span>Nextjob</span>
+            </div>
+          </div>
+
+          <!-- SKILL 2 -->
+          <div class="skill-card" data-category="recruitment" data-tilt>
+            <div class="skill-top">
+              <div class="skill-badge-icon"><i class="fa-solid fa-passport"></i></div>
+              <div class="skill-meta">
+                <h4>International Visa Management</h4>
+                <span class="skill-level">Advanced · 90%</span>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" data-progress="90%"></div>
+            </div>
+            <p class="skill-info">Hands-on coordination for U.S. visa programs (H1B, EB2, EB3), cross-border candidate documentation, and academic visa coordination.</p>
+            <div class="skill-subtags">
+              <span>H1B</span>
+              <span>EB2</span>
+              <span>EB3</span>
+              <span>Visa Coordination</span>
+              <span>Cross-Border Sourcing</span>
+            </div>
+          </div>
+
+          <!-- SKILL 3 -->
+          <div class="skill-card" data-category="compliance" data-tilt>
+            <div class="skill-top">
+              <div class="skill-badge-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+              <div class="skill-meta">
+                <h4>Bangladesh Labour Law & ISO 9001</h4>
+                <span class="skill-level">Expert · 98%</span>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" data-progress="98%"></div>
+            </div>
+            <p class="skill-info">In-depth expertise in Bangladesh Labour Act 2006, Bangladesh Labour Rules 2015, workplace dispute resolution, and ISO 9001 standardization.</p>
+            <div class="skill-subtags">
+              <span>BLA 2006</span>
+              <span>BLR 2015</span>
+              <span>ISO 9001</span>
+              <span>Statutory Audits</span>
+              <span>Policy Drafting</span>
+            </div>
+          </div>
+
+          <!-- SKILL 4 -->
+          <div class="skill-card" data-category="operations" data-tilt>
+            <div class="skill-top">
+              <div class="skill-badge-icon"><i class="fa-solid fa-briefcase"></i></div>
+              <div class="skill-meta">
+                <h4>HRBP & People Operations</h4>
+                <span class="skill-level">Mastery · 94%</span>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" data-progress="94%"></div>
+            </div>
+            <p class="skill-info">Attendance management, leave policies, employee records, KPI reviews, vendor management, office admin, and facility operations.</p>
+            <div class="skill-subtags">
+              <span>HRBP</span>
+              <span>Employee Relations</span>
+              <span>Vendor Contracts</span>
+              <span>Admin & Facilities</span>
+              <span>Petty Cash</span>
+            </div>
+          </div>
+
+          <!-- SKILL 5 -->
+          <div class="skill-card" data-category="operations" data-tilt>
+            <div class="skill-top">
+              <div class="skill-badge-icon"><i class="fa-solid fa-calculator"></i></div>
+              <div class="skill-meta">
+                <h4>Payroll Processing & Compensation</h4>
+                <span class="skill-level">Advanced · 92%</span>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" data-progress="92%"></div>
+            </div>
+            <p class="skill-info">Managing complex multi-variable payroll for fleets (300+ riders) and salaried executives with bonuses, deductions, and tax compliance.</p>
+            <div class="skill-subtags">
+              <span>Fleet Payroll</span>
+              <span>Bonus Structure</span>
+              <span>Incentive Models</span>
+              <span>Reconciliation</span>
+            </div>
+          </div>
+
+          <!-- SKILL 6 -->
+          <div class="skill-card" data-category="tech" data-tilt>
+            <div class="skill-top">
+              <div class="skill-badge-icon"><i class="fa-solid fa-laptop-code"></i></div>
+              <div class="skill-meta">
+                <h4>HR Systems & Enterprise Tech</h4>
+                <span class="skill-level">Expert · 92%</span>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" data-progress="92%"></div>
+            </div>
+            <p class="skill-info">Proficient across HRIS, HRMS, EDMS, ERP systems, SPSS statistical data analysis, advanced Microsoft Office, and Google Workspace.</p>
+            <div class="skill-subtags">
+              <span>HRIS / HRMS</span>
+              <span>ERP & EDMS</span>
+              <span>SPSS Analytics</span>
+              <span>Advanced Excel</span>
+              <span>Google Workspace</span>
+            </div>
+          </div>
+
+          <!-- SKILL 7 -->
+          <div class="skill-card" data-category="tech" data-tilt>
+            <div class="skill-top">
+              <div class="skill-badge-icon"><i class="fa-solid fa-terminal"></i></div>
+              <div class="skill-meta">
+                <h4>OS, Systems & AI Prompt Engineering</h4>
+                <span class="skill-level">Advanced · 88%</span>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" data-progress="88%"></div>
+            </div>
+            <p class="skill-info">Hands-on experience in Windows, Linux (Ubuntu, Kali Linux), virtual machine operation, AI Prompt Engineering, and electronics troubleshooting.</p>
+            <div class="skill-subtags">
+              <span>Ubuntu & Kali Linux</span>
+              <span>AI Prompt Engineering</span>
+              <span>Networking & Security</span>
+              <span>VM Operations</span>
+            </div>
+          </div>
+
+          <!-- SKILL 8 -->
+          <div class="skill-card" data-category="operations" data-tilt>
+            <div class="skill-top">
+              <div class="skill-badge-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+              <div class="skill-meta">
+                <h4>Commercial & Warehouse Operations</h4>
+                <span class="skill-level">Advanced · 89%</span>
+              </div>
+            </div>
+            <div class="skill-bar-wrapper">
+              <div class="skill-bar" data-progress="89%"></div>
+            </div>
+            <p class="skill-info">Warehouse efficiency audits, dispatch & picking verification, quality control (QC) checks, FMCG product pricing, and inventory flow control.</p>
+            <div class="skill-subtags">
+              <span>Warehouse Audits</span>
+              <span>FMCG Pricing</span>
+              <span>Quality Control (QC)</span>
+              <span>Dispatch Tracking</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section class="education-section section-padding" id="education">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Credentials</span>
+          <h2 class="section-title">Education & Specialized Certifications</h2>
+          <p class="section-desc">
+            Academic grounding in Human Resource Management backed by technical credentials in IT sourcing, cybersecurity, and prompt engineering.
+          </p>
+        </div>
+
+        <div class="edu-grid">
+          <!-- ACADEMIC COLUMN -->
+          <div class="edu-column">
+            <h3 class="col-heading"><i class="fa-solid fa-graduation-cap"></i> Academic Background</h3>
+
+            <!-- BBA -->
+            <div class="edu-card glass-card" data-tilt>
+              <div class="edu-period"><i class="fa-regular fa-calendar"></i> 2019 – 2023</div>
+              <h4 class="edu-degree">Bachelor of Business Administration (BBA)</h4>
+              <h5 class="edu-major">Major in Human Resources Management</h5>
+              <p class="edu-institution">Southeast University, Dhaka</p>
+              <p class="edu-notes">
+                Comprehensive coursework in International Human Resource Management, Training & Development, Compensation & Benefits, Industrial Relations, and HR Strategy. Practical projects and capstones completed.
+              </p>
+            </div>
+
+            <!-- HSC -->
+            <div class="edu-card glass-card" data-tilt>
+              <div class="edu-period"><i class="fa-regular fa-calendar"></i> Completed 2018</div>
+              <h4 class="edu-degree">Higher Secondary Certificate (HSC)</h4>
+              <h5 class="edu-major">Business Studies</h5>
+              <p class="edu-institution">BAF Shaheen College, Chattogram</p>
+              <p class="edu-notes">Rigorous business studies curriculum with emphasis on organizational discipline, accounting, and business mathematics.</p>
+            </div>
+
+            <!-- SSC -->
+            <div class="edu-card glass-card" data-tilt>
+              <div class="edu-period"><i class="fa-regular fa-calendar"></i> Completed 2016</div>
+              <h4 class="edu-degree">Secondary School Certificate (SSC)</h4>
+              <h5 class="edu-major">Business Studies</h5>
+              <p class="edu-institution">BAF Shaheen College, Chattogram</p>
+              <p class="edu-notes">Foundation in business principles, quantitative reasoning, and communication.</p>
+            </div>
+          </div>
+
+          <!-- CERTIFICATIONS COLUMN -->
+          <div class="edu-column">
+            <h3 class="col-heading"><i class="fa-solid fa-certificate"></i> Specialized Certifications</h3>
+
+            <!-- CERT 1 -->
+            <div class="cert-card glass-card" data-tilt>
+              <div class="cert-icon-box"><i class="fa-solid fa-user-ninja"></i></div>
+              <div class="cert-content">
+                <span class="cert-issuer">UpSkill Academia</span>
+                <h4>IT Recruitment Certification</h4>
+                <ul class="cert-bullets">
+                  <li>Basic technical screening and vetting of software candidates</li>
+                  <li>GitHub repository code auditing & commit analysis</li>
+                  <li>Technical portfolio validation & project architecture overview</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CERT 2 -->
+            <div class="cert-card glass-card" data-tilt>
+              <div class="cert-icon-box"><i class="fa-solid fa-shield-virus"></i></div>
+              <div class="cert-content">
+                <span class="cert-issuer">UpSkill Academia</span>
+                <h4>Networking & Cyber Security Certification</h4>
+                <ul class="cert-bullets">
+                  <li><strong>Networking (Advanced):</strong> Troubleshooting, DHCP, Server Monitoring, Firewall Security, DNS, IP Subnetting, TCP/IP, LAN/WAN</li>
+                  <li><strong>Cyber Security (Mid-level):</strong> Network Monitoring, VLAN, Kali Linux, Virtual Machine (VM) Operations, OWASP vulnerabilities</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CERT 3 -->
+            <div class="cert-card glass-card" data-tilt>
+              <div class="cert-icon-box"><i class="fa-solid fa-microchip"></i></div>
+              <div class="cert-content">
+                <span class="cert-issuer">Technical Institute</span>
+                <h4>Basic Electronics Certification</h4>
+                <ul class="cert-bullets">
+                  <li>Diagnostic troubleshooting and circuit repair of non-working electronic devices</li>
+                  <li>Hardware component testing and safety protocols</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- CERT 4 -->
+            <div class="cert-card glass-card" data-tilt>
+              <div class="cert-icon-box"><i class="fa-solid fa-wand-sparkles"></i></div>
+              <div class="cert-content">
+                <span class="cert-issuer">UpSkill</span>
+                <h4>AI Prompt Engineering Course</h4>
+                <ul class="cert-bullets">
+                  <li>Advanced generative AI prompting strategies for HR workflow automation</li>
+                  <li>Boolean candidate search optimization & automated screening models</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE HIRING ROI & PIPELINE CALCULATOR -->
+    <section class="calculator-section section-padding" id="calculator">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Interactive Tool</span>
+          <h2 class="section-title">Hiring Efficiency & Cost Optimization Calculator</h2>
+          <p class="section-desc">
+            Estimate how structured technical screening, reduced time-to-hire, and disciplined candidate pipelines translate into measurable business savings.
+          </p>
+        </div>
+
+        <div class="calculator-wrapper glass-card">
+          <div class="calc-inputs-col">
+            <div class="calc-input-group">
+              <div class="calc-label-row">
+                <label for="calc-roles"><i class="fa-solid fa-briefcase"></i> Open Roles to Fill (Annually)</label>
+                <span class="calc-val-display" id="calc-roles-val">12 roles</span>
+              </div>
+              <input type="range" id="calc-roles" min="1" max="50" value="12" step="1" class="calc-slider">
+            </div>
+
+            <div class="calc-input-group">
+              <div class="calc-label-row">
+                <label for="calc-days"><i class="fa-regular fa-clock"></i> Current Avg. Days to Hire</label>
+                <span class="calc-val-display" id="calc-days-val">45 days</span>
+              </div>
+              <input type="range" id="calc-days" min="15" max="90" value="45" step="1" class="calc-slider">
+            </div>
+
+            <div class="calc-input-group">
+              <div class="calc-label-row">
+                <label for="calc-salary"><i class="fa-solid fa-dollar-sign"></i> Avg. Annual Role Salary ($ USD)</label>
+                <span class="calc-val-display" id="calc-salary-val">$40,000</span>
+              </div>
+              <input type="range" id="calc-salary" min="10000" max="150000" value="40000" step="5000" class="calc-slider">
+            </div>
+
+            <div class="calc-input-group">
+              <div class="calc-label-row">
+                <label for="calc-turnover"><i class="fa-solid fa-rotate-left"></i> Current 1st Year Attrition Rate</label>
+                <span class="calc-val-display" id="calc-turnover-val">20%</span>
+              </div>
+              <input type="range" id="calc-turnover" min="5" max="40" value="20" step="1" class="calc-slider">
+            </div>
+          </div>
+
+          <div class="calc-results-col">
+            <div class="results-card">
+              <div class="result-badge"><i class="fa-solid fa-sparkles"></i> Zahid's Projected Impact</div>
+
+              <div class="result-stat-box">
+                <span class="result-stat-label">Projected Annual Cost Savings</span>
+                <span class="result-stat-value" id="calc-result-savings">$18,400</span>
+                <span class="result-stat-sub">From reduced vacancy loss, direct sourcing, and lower turnover</span>
+              </div>
+
+              <div class="result-metrics-mini-grid">
+                <div class="mini-metric">
+                  <span class="mini-label">Days Saved Per Hire</span>
+                  <strong class="mini-val" id="calc-result-days-saved">16 days</strong>
+                </div>
+                <div class="mini-metric">
+                  <span class="mini-label">Target Days to Fill</span>
+                  <strong class="mini-val" id="calc-result-new-days">29 days</strong>
+                </div>
+                <div class="mini-metric">
+                  <span class="mini-label">Attrition Reduction</span>
+                  <strong class="mini-val" id="calc-result-attrition">-35%</strong>
+                </div>
+                <div class="mini-metric">
+                  <span class="mini-label">Sourcing Efficiency</span>
+                  <strong class="mini-val">+42%</strong>
+                </div>
+              </div>
+
+              <a href="#contact" class="btn btn-primary btn-block">
+                <span>Discuss Your Hiring Pipeline</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT & DIRECT CONNECT -->
+    <section class="contact-section section-padding" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Start a Conversation</h2>
+          <p class="section-desc">
+            Seeking an experienced Technical Recruiter, HR Operations Specialist, or Strategic People Partner? Send a direct message or connect instantly via WhatsApp.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- CONTACT INFO & DIRECT CHANNELS -->
+          <div class="contact-info-col glass-card" data-tilt>
+            <h3>Get in Touch Directly</h3>
+            <p>I am actively available for full-time opportunities, international remote recruiting engagements, and strategic HR consulting.</p>
+
+            <div class="contact-methods-list">
+              <!-- Method 1: Email -->
+              <div class="contact-method-item">
+                <div class="method-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Email</span>
+                  <a href="mailto:zahidbinali087@gmail.com" class="method-val">zahidbinali087@gmail.com</a>
+                </div>
+                <button class="copy-btn" data-copy="zahidbinali087@gmail.com" title="Copy Email">
+                  <i class="fa-regular fa-copy"></i>
+                </button>
+              </div>
+
+              <!-- Method 2: WhatsApp -->
+              <div class="contact-method-item">
+                <div class="method-icon whatsapp-bg"><i class="fa-brands fa-whatsapp"></i></div>
+                <div class="method-details">
+                  <span class="method-label">WhatsApp (Direct Chat)</span>
+                  <a href="https://wa.me/8801712245856" target="_blank" rel="noopener" class="method-val">+880 1712-245856</a>
+                </div>
+                <a href="https://wa.me/8801712245856" target="_blank" rel="noopener" class="action-btn" title="Open WhatsApp">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+              <!-- Method 3: LinkedIn -->
+              <div class="contact-method-item">
+                <div class="method-icon linkedin-bg"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="method-details">
+                  <span class="method-label">LinkedIn</span>
+                  <a href="https://linkedin.com/in/zahid-bin-ali-zu" target="_blank" rel="noopener" class="method-val">linkedin.com/in/zahid-bin-ali-zu</a>
+                </div>
+                <a href="https://linkedin.com/in/zahid-bin-ali-zu" target="_blank" rel="noopener" class="action-btn" title="View LinkedIn">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+              <!-- Method 4: Location -->
+              <div class="contact-method-item">
+                <div class="method-icon"><i class="fa-solid fa-map-pin"></i></div>
+                <div class="method-details">
+                  <span class="method-label">Location</span>
+                  <span class="method-val">B.A.F Base Kurmitola, Dhaka Cantonment, 1206</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direct Resume Download Card -->
+            <div class="resume-download-box">
+              <div class="resume-meta">
+                <i class="fa-solid fa-file-pdf"></i>
+                <div>
+                  <strong>Zahid_Bin_Ali_Resume.pdf</strong>
+                  <span>Official Verified PDF Document</span>
+                </div>
+              </div>
+              <a href="assets/Zahid_Bin_Ali_Resume.pdf" download="Zahid_Bin_Ali_Resume.pdf" class="btn btn-primary btn-sm">
+                <i class="fa-solid fa-download"></i> Download
+              </a>
+            </div>
+          </div>
+
+          <!-- INTERACTIVE CONTACT FORM -->
+          <div class="contact-form-col glass-card">
+            <h3>Send a Direct Message</h3>
+            <p>Fill out the form below. It automatically generates a direct email and WhatsApp message draft for instant response.</p>
+
+            <form id="contact-form" class="interactive-form">
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="form-name">Your Name *</label>
+                  <input type="text" id="form-name" required placeholder="e.g. Jane Doe">
+                </div>
+                <div class="form-group">
+                  <label for="form-email">Your Email *</label>
+                  <input type="email" id="form-email" required placeholder="e.g. jane@company.com">
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label for="form-company">Company / Organization</label>
+                  <input type="text" id="form-company" placeholder="e.g. Acme Tech Inc.">
+                </div>
+                <div class="form-group">
+                  <label for="form-subject">Subject / Inquiry Type</label>
+                  <select id="form-subject">
+                    <option value="Technical Recruiting Role">Technical Recruiting Role</option>
+                    <option value="HR Operations / HRBP Role">HR Operations / HRBP Role</option>
+                    <option value="International Visa Consultation">International Visa Consultation</option>
+                    <option value="Contract / Sourcing Project">Contract / Sourcing Project</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message">Your Message *</label>
+                <textarea id="form-message" rows="5" required placeholder="Tell me about your role requirements, organization goals, or how we can collaborate..."></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary btn-lg" id="submit-form-btn">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>Send via Email</span>
+                </button>
+                <button type="button" class="btn btn-whatsapp btn-lg" id="whatsapp-form-btn">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  <span>Send via WhatsApp</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <span class="logo-badge">Z</span>
+          <div>
+            <h3>Zahid Bin Ali</h3>
+            <p>HR & Admin Professional · Technical Recruiter · HR Operations Specialist</p>
+          </div>
+        </div>
+        <div class="footer-socials">
+          <a href="https://linkedin.com/in/zahid-bin-ali-zu" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://wa.me/8801712245856" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:zahidbinali087@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Zahid Bin Ali. All rights reserved. Crafted with clean architecture & modern web performance.</p>
+        <div class="footer-links">
+          <a href="#hero">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING QUICK ACTION DOCK -->
+  <div class="floating-dock">
+    <a href="https://wa.me/8801712245856" target="_blank" rel="noopener" class="dock-item dock-whatsapp" title="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="mailto:zahidbinali087@gmail.com" class="dock-item dock-email" title="Email Zahid">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <a href="https://linkedin.com/in/zahid-bin-ali-zu" target="_blank" rel="noopener" class="dock-item dock-linkedin" title="LinkedIn Profile">
+      <i class="fa-brands fa-linkedin-in"></i>
+    </a>
+    <button class="dock-item dock-top" id="scroll-top-btn" title="Scroll to Top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+  </div>
+
+  <!-- PDF RESUME PREVIEW MODAL -->
+  <div class="modal-backdrop" id="resume-modal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-file-pdf"></i>
+          <h3>Zahid Bin Ali — Official Resume Preview</h3>
+        </div>
+        <div class="modal-actions">
+          <a href="assets/Zahid_Bin_Ali_Resume.pdf" download="Zahid_Bin_Ali_Resume.pdf" class="btn btn-primary btn-sm">
+            <i class="fa-solid fa-download"></i> Download PDF
+          </a>
+          <button class="modal-close" id="modal-close-btn" aria-label="Close modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <iframe src="assets/Zahid_Bin_Ali_Resume.pdf#toolbar=1&navpanes=0" id="resume-iframe" title="Zahid Bin Ali Resume PDF"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPOTLIGHT COMMAND PALETTE (CTRL+K) -->
+  <div class="palette-backdrop" id="command-palette">
+    <div class="palette-box">
+      <div class="palette-input-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="palette-input" placeholder="Type a command or jump to section (e.g. Experience, Skills, WhatsApp)..." autocomplete="off">
+        <span class="palette-esc">ESC</span>
+      </div>
+      <div class="palette-list" id="palette-list">
+        <!-- Palette items populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
